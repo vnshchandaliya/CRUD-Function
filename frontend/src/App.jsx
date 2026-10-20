@@ -144,7 +144,7 @@ export default function App() {
     } catch (err) {
       setError(
         err.message ||
-        "Unable to connect to the backend. Check that your server is running."
+          "Unable to connect to the backend. Check that your server is running."
       );
     } finally {
       setLoading(false);
@@ -319,9 +319,28 @@ export default function App() {
         initial="hidden"
         animate="visible"
       >
+        <motion.header className="topbar" variants={itemVariants}>
+          {/* <a href="#" className="brand" aria-label="Nexus dashboard home">
+            <span className="brand-mark">
+              <Database size={22} />
+            </span>
+            <span>
+              <strong>NEXUS</strong>
+              <small>USER MANAGEMENT</small>
+            </span>
+          </a> */}
 
+          {/* <div className="topbar-right">
+            <span className="secure-pill">
+              <ShieldCheck size={15} />
+              Secure dashboard
+            </span>
+            <span className="avatar-mini">AD</span>
+          </div> */}
+        </motion.header>
 
-        {/* <motion.section className="stats-grid" variants={containerVariants}>
+        
+        <motion.section className="stats-grid" variants={containerVariants}>
           <StatCard
             icon={Users}
             label="Total users"
@@ -342,7 +361,7 @@ export default function App() {
             accent="#34d399"
             delay={160}
           />
-        </motion.section> */}
+        </motion.section>
 
         <motion.section className="create-panel" variants={itemVariants}>
           <div className="create-copy">
